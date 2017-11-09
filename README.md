@@ -26,3 +26,17 @@ There are many ways to get started depending on your Goals
 1. Whats this all about?
 1. Can I talk to someone?
 1. Use Cases
+
+----
+
+# Portal
+
+What is the Portal UI
+
+# Admin
+
+What is the Admin UI
+
+# API
+
+What is the API
