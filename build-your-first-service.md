@@ -35,8 +35,7 @@ This guide covers two walkthroughs: Quick Start, and Detailed Walkthrough.
 1. When configuring User Tasks you must configure a Candidate Group and optionally a Assignee.  The `Assignee` field must be pre-pended with the Identity Type (Individual, Organization, Staff).  The `Assignee` and `Candidate Group` fields use Identity UUIDs.  The Candidate Group uses the Identity `Business Unit` for its UUIDs and therefore no pre-pending of Identity Type is required in the `Candidate Group` field.
 <br><br>
 Example:<br>
-**Assignee:** `Staff:e32f09b7-e1cf-4a91-a0e1-6822bf47a662`.
-<br>
+**Assignee:** `Staff:e32f09b7-e1cf-4a91-a0e1-6822bf47a662`.<br>
 **Candidate Group:** `c11c546e-bd01-47cf-97da-e25388357b5a`.
 <br><br>
 In practice these fields would typically be dynamically generated based on scripts, DMN, and Expression Language usage. Note that permissions are inherited from the Candidate Group; a User will not be able to access the Task if they do not have the proper permissions for the Candidate Group UUID (the Business Unit Identity).
