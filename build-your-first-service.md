@@ -55,9 +55,16 @@ Save your .bpmn file and you are ready to create your forms.
 1. Set form Title, Name and Path.  The Path is the name that you used in your Form-Key on the Start Event.
 1. Add some fields
 1. Save the Form
+![Formio Create Form](./resources/formio/formio-create-form.png)
+
 1. You will now be on the Form View/Input page; select the `Form Actions` tab and remove the "Save Submission` action.
+![Formio Form Actions Default](./resources/formio/formio-form-actions-default.png)
+![Formio Form Actions Default](./resources/formio/formio-form-actions-deleted.png)
+
 1. Go to the `Permissions` tab and delete all permissions.
 1. In the `Permissions` tab, add the `Anonymous` role to the "Create own Submissions" permission.
+![Formio Form Actions Default](./resources/formio/formio-form-access-permissions.png)
+
 
 ### User Task Form
 Repeat the steps from Start Event Form, for the User Task Form but use the User Task's Form-Key (`myuserform1`).
@@ -71,6 +78,8 @@ Repeat the steps from Start Event Form, for the User Task Form but use the User 
     `ds[identity].persona.data.first_name`
     <br>
     Where `ds` is the namespace identifier.  `[identity]` is the context to which permissions and the resolver is to function in.  `identity` tells the resolver to use the current user's identity for permissions and data access. The  `.persona` accesses the current Identity's persona in the Identities microservice. The `.data` accesses the `data` column in the Identity (`data` is a JSON column). The `first_name` is a JSON property accessor for the json object inside of the `data` column.  Anything after `.data` is parsed as a JSON property and array accessor using standard json accessor patterns.
+    ![Formio Data Resolver](./resources/formio/formio-data-resolver.png)
+
 1. To access the BPM Content Data use the following:
     1. Edit a Form Field: Select the Data Tab: and edit the `Default Value` field.
     1. The following pattern is used:<br>
@@ -82,10 +91,14 @@ Repeat the steps from Start Event Form, for the User Task Form but use the User 
 
 1. Open the DigitalState Admin web app
 1. Navigate the menu to Services > Service Directory. and Create a new Service.
-1. Configure the mandatory Service fields
+![Service Creation](./resources/service-directory/Create-Service.png)
+
 1. Once the service is created, create a Service Scenario inside of the previously created Service.  Use the `BPM` scenario type.
-1. Set the `Process Definition Key` to the `Process Id` value that was set in your BPMN file.
-1. Configure the rest of the mandatory Service Scenario fields.
+![Service without scenarios](./resources/service-directory/Service-without-Scenarios.png)
+![Service BPM](./resources/service-directory/Scenario-Create-Select-List.png)
+
+1. Set the `Process Definition Key` to the `Process Id` value that was set in your BPMN file and configure the rest of the mandatory Service Scenario fields.
+![Scenario Creation](./resources/service-directory/Scenario-Create.png)
 
 ## Deploy the BPMN File
 
@@ -94,6 +107,8 @@ Repeat the steps from Start Event Form, for the User Task Form but use the User 
 1. Configure the deployment configs in the request body (Other than the deployment name, and the BPMN file, the rest can typically remain the same as the defaults in the Postman collection)
 1. Add the BPMN file to the request
 1. Send the Request/Deploy the BPMN file.
+![Postman Camunda Deployment](./resources/postman/postman-camunda-deployment.png)
+
 
 ## Ready to Go!
 
