@@ -10,8 +10,8 @@ There are many ways to get started depending on your Goals
 1. [Ansible/SDK - Start Here](https://github.com/DigitalState/Sdk)
 1. [Build your first Digital Public Service](./build-your-first-service.md)
 1. Network Configurations
-1. Cloud Deployments
-1. On-Premise Deployments
+1. [Cloud Deployments](./deployments.md#cloud)
+1. [On-Premise Deployments](./deployments.md#on-premise)
 1. Production/"Going-Live" Considerations
 
 ## Service Designers
