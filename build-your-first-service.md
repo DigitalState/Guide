@@ -87,6 +87,11 @@ Repeat the steps from Start Event Form, for the User Task Form but use the User 
     <br>
     The pattern is the same as the Identity pattern by with some minor differences: Where `bpm` is the context that tells the form to detect what User Task the form is being called from and what Process Instance the User Task is apart of.  Where `.task.variable` accesses the variables in the Task sub-system in Camunda. The `start_data` is the Process Variable that stores the Start Event's submission / json variables.  The `someKey` is the JSON property inside of the `start_data` variable.  Use JSON accessors the same way they are used in the Identity context to access JSON properties.  Note that `start_data` can be changed for any JSON variable that is created during the Process Instance life-cycle.
 
+### Formio Translations
+
+The CMS Microservice manages the storage of translation files.
+See the [docs](https://github.com/DigitalState/Cms/blob/develop/translations-howto.md#formio-translations) for how translations are added into the CMS.
+
 ## Create Service Scenario in Service Directory
 
 1. Open the DigitalState Admin web app
