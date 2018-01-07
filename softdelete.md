@@ -40,8 +40,21 @@ Entities that has soft-delete enabled cannot be deleted outright from storage at
 
 ## Various Conditions
 
-1. What happens when you GET/PATCH/PUT on a soft-deleted item? Do i have to apply the query param to access it?
-1. Can i PATCH/PUT on a soft-deleted item? If not, what is required? aka: you must un-delete the item fist, aka soft-delete is a hardened snapshot in time.
+1. What happens when you issue a GET request on soft-deleted item(s)? Do i have to apply the query param to access it?
+By default, only non-deleted items are returned. If the query param `deleted` is provided, then the expected behavior is as below:
+
+- `null`: (literal word) Returns all entities, whether they have been deleted or not.
+- `false`: Returns entities that are not deleted.
+- `true`: Returns entities that have been deleted.
+
+1. Can I PATCH/PUT on a soft-deleted item?
+The item will get updated as normal. No additional parameters are needed.
+
 1. Is there a data about who deleted it?
+At the moment, there is no data about who deleted it.
+
 1. Is there data about who Un-deleted it?
+At the moment, there is no data about who un-deleted it.
+
 1. Are there specific error messages about soft-deleted content?
+At the moment, there are no specific error messages about soft-deleted content.
