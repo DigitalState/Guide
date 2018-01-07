@@ -18,31 +18,25 @@ Possible values:
 
 See the DigitalState Postman Collection in the SDK Repo for further examples of the `deleted` query param.
 
-## How to Un-Delete soft-deleted content?
-
-...
-
 ## How does Soft-Delete work?
 
-Each entity that has soft-delete enabled, implements a database column (COLUMN NAME GOES HERE), which tracks the timestamp of when that database record was deleted.
+Each entity that has soft-delete enabled, implements a property named `deletedAt`, which tracks the timestamp of when that database record was deleted.
+
+## How to Un-Delete soft-deleted content?
+
+In order to un-delete soft-deleted content, you will need to issue a PATCH request to the entity with `"deletedAt": null`.
 
 ## What Happens when you Create new content?
 
-...
+By default, when creating a new entity, the `deletedAt` column will be null. In other words, a non-deleted content.
 
 ## What happens when you delete content?
 
-... something like timestamp is applied
-
-## What happens when you un-delete content?
-
-... something like the column value is returned to null? Is there a log or somesort of history of un-deletion?  If not, but its planned (not saying it is, just asking), then create a ticket and link to it.
+When issuing a DELETE request to an entity with soft-delete enabled, the row will remain in storage, however, the `deletedAt` property will be updated with the current timestamp. The entity will be then considered soft-deleted.
 
 ## How to Permanently Delete data?
 
-...
-If there not currently a API for this then explain how a API function is not currently implemented.  Create a Ticket/issue for it, and Link to that ticket.
-
+Entities that has soft-delete enabled cannot be deleted outright from storage at the moment. See [ticket](https://github.com/DigitalState/Core/issues/33).
 
 ## Various Conditions
 
