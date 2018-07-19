@@ -41,3 +41,30 @@ What is the Admin UI
 # API
 
 What is the API
+
+
+## Screenshots
+
+The following are screenshots from the Portal and Admin UI
+
+### Admin
+
+![Admin Login](./docs/resources/Admin-Login.png)
+
+---
+
+![Admin User List](./docs/resources/Admin-Users-List.png)
+
+---
+
+![Admin User View](./docs/resources/Admin-Users-View.png)
+
+---
+
+### Portal (Individuals)
+
+![Portal Individual Login](./docs/resources/Individual-Login.png)
+
+---
+
+![Portal Individual Signup](./docs/resources/Individual-Signup.png)
